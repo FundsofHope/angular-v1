@@ -1,0 +1,60 @@
+<section layout="column" layout-fill flex>
+    <div class="container" layout="row" layout-fill flex>
+	    <!-- SIDE NAVBAR -->
+	    <md-sidenav layout="column" class="md-whiteframe-10dp" md-is-locked-open="true">
+	    	<md-toolbar id="sidetoolbar" flex>
+        		<div class="personInfo" flex>
+        			<!-- <md-subheader id="subheader">king</md-subheader> -->
+        			<!-- <md-content>Content</md-content> -->
+       			</div>
+                <md-list flex>
+       	 			<md-list-item class="md-3-line" ng-click="null">
+        				<h4>HOME</h4>
+        			</md-list-item>
+        			<md-divider ></md-divider>
+        			<md-list-item class="md-3-line" ng-click="null">
+        				<h4>PROJECT</h4>
+        			</md-list-item>
+        			<md-divider ></md-divider>
+        			<md-list-item class="md-3-line" ng-click="null">
+        				<h4>NGOs</h4>
+        			</md-list-item>
+        		</md-list>
+            </md-toolbar>
+	    </md-sidenav>
+
+
+	    <div class="content-box" layout="column" layout-fill flex>
+
+			<!-- TOOLBAR -->
+			<md-toolbar id="toolbar" class="md-hue-2">
+		    	<div class="md-toolbar-tools">
+		        	<a href="#" id="brand-name">Fundsofhope</a>
+		        </div>
+		    </md-toolbar>
+
+		    <!-- CONTENT -->
+			<div layout="column" flex>
+				<md-content layout="row" class="md-whiteframe 5dp" flex layout-wrap>
+					<md-card id="project-card" ng-repeat="items in descriptions" flex="23">
+				        <img src="images/img4.jpg" class="md-card-image" alt="Washed Out">
+				        <md-card-title>
+				        	<md-card-title-text>
+				            	<span class="md-headline">{{items.title}}</span>
+				          	</md-card-title-text>
+				        </md-card-title>
+				        <md-card-content>
+				        	<h3>Description</h3>
+				        	<p>
+					            {{items.description}}
+				          	</p>
+				        </md-card-content>
+				        <md-card-actions layout="row" layout-align="end center">
+					        <md-button md-raised>Donate</md-button>
+				        </md-card-actions>
+      				</md-card>
+				</md-content>
+			</div>
+		</div>
+    </div>
+</section>

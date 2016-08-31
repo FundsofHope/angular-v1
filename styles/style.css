@@ -1,0 +1,41 @@
+/*ID STYLES*/
+#toolbar {
+	height: 25%;
+}
+
+#sidetoolbar{
+	background-color: white;	
+}
+
+#project-card {
+	width: 400px;
+	height: 450px;
+	margin-left: 6%;
+	margin-top: 5%;
+}
+
+/*#brand-name {
+	margin-top: 10%;
+	margin-left: 5%;
+	font-size: 2em;
+}
+*/
+/*CLASS STYLES*/
+
+.personInfo {
+	background-color: #F5F5F5;
+	/*height: 2em;*/
+}	
+
+/*TAG STYLES*/
+p {
+	overflow-x: auto;
+    white-space: nowrap;
+    width: 400px;
+}
+
+h4 {
+	color: black;
+}
+
+
