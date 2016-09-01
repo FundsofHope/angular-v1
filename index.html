@@ -20,7 +20,50 @@
 	<script type="text/javascript" src="custom-scripts/mainController.js"></script>
 	<script type="text/javascript" src="custom-scripts/appController.js"></script>
 </head>
-<body ng-app="app" ng-view>
+<body ng-app="app" layout="column" layout-fill flex>
+	<!-- TOOLBAR AND SIDENAVBAR IMPLEMENTATION HERE -->
 
+	<!-- MAIN CONTAINER FIRST BOX -->
+    <div class="container" layout="row" layout-fill flex>
+	    <!-- SIDE NAVBAR -->
+	    <md-sidenav layout="row" id="sidenav" class="md-whiteframe-10dp" md-is-locked-open="true">
+	    	<md-toolbar id="sidetoolbar" flex>
+        		<div class="personInfo">
+        			<md-content flex>
+        				<!-- ADD LOGGINED PERSON'S DETAILS HERE -->
+        			</md-content>
+       			</div>
+       			<md-divider></md-divider>
+                <md-list flex>
+       	 			<md-list-item class="md-3-line" href="#/home">
+        				Home
+        			</md-list-item>
+        			<md-list-item class="md-3-line" href="#/projects">
+        				Project
+        			</md-list-item>
+        			<md-list-item class="md-3-line" href="#/ngos">
+        				Ngos
+        			</md-list-item>
+        		</md-list>
+            </md-toolbar>
+	    </md-sidenav>
+
+	    <!-- TOOLBAR AND CONTENT CONTAINER -->
+	    <div class="content-box" layout="column" layout-fill flex>
+			<!-- TOOLBAR -->
+			<md-toolbar id="toolbar">
+		    	<div class="md-toolbar-tools">
+		        	<a href="#" id="brand-name">Funds Of Hope</a>
+		        </div>
+		    </md-toolbar>
+
+		    <!-- CONTENT -->
+			<div layout="column" flex>
+				<md-content ng-view>
+					<!-- ROUTING TEMPLATES COMES HERE -->
+				</md-content>
+			</div>
+		</div>
+    </div>
 </body>
 </html>

@@ -1,14 +1,18 @@
 angular.module('app')
 	
-	.controller('abc', ['$scope', function($scope){
+	.controller('home-content-ctrl', ['$scope', '$http',
+			// LOGIN SYSTEM IMPLEMENTATION
+		])
 
-	}])
-
-	.controller('homeloginCtrl', ['$scope', '$http',
+	.controller('project-ctrl', ['$scope', '$http',
 		function ($scope, $http){
 				var descriptions;
 				$http.get('http://api.fundsofhope.org/projects/all').success(function(data){
 				$scope.descriptions = data;
 				console.log(descriptions);
 			})
-		}]);
+		}])
+
+	.controller('ngo-ctrl', ['$scope', '$http',
+			// NGO CARDs IMPLEMENTATION
+		])

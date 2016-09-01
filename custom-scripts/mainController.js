@@ -3,15 +3,17 @@ angular.module('app', ['ngRoute', 'ngMaterial'])
 	// IMPLEMENTING ROUTING
 	.config([
 		'$routeProvider', function($routeProvider){
-			// console.log("yoman")
 			$routeProvider.when('/home', {
-				// template: '<h1>king</h1>',
 				templateUrl: 'templates/home.html',
-				// template: '<h1>king</h1>',
-				controller: 'homeloginCtrl'
+				controller: 'home-content-ctrl'
+			}).when('/projects', {
+				templateUrl: 'templates/project.html',
+				controller: 'project-ctrl'
+			}).when('/ngos', {
+				templateUrl: 'templates/ngo.html',
+				controller: 'ngo-ctrl'
 			}).otherwise({
 				redirectTo: '/home'
 			});
-			// console.log("yesman");
 		}
 	]);
