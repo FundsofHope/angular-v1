@@ -1,6 +1,17 @@
 /*ID STYLES*/
 #toolbar {
-	height: 13.5em;
+	height: 200px;
+}
+
+#g-login{
+	/*margin-top: 3%;*/
+	margin-left: 2em;
+	float: right;
+}
+
+#fb-login{
+	margin-left: 50%;
+	float: right;
 }
 
 #sidetoolbar{
@@ -11,7 +22,7 @@
 	width: 300px;
 	height: 400px;
 	margin-left: 5%;
-	margin-top: 5%;
+	/*margin-top: 5%;*/
 }
 
 #sidenav {
@@ -20,9 +31,10 @@
 
 #brand-name {
 	color: white;
-	margin-top: 3em;
+	font-weight: lighter;
+	/*margin-top: 1em;*/
 	margin-left: 1em;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 #description {
@@ -35,15 +47,32 @@
 	margin-left: 10px;
 	margin-bottom: 0px;
 }
-/*CLASS STYLES*/
 
-.personInfo {
-	background-color: #FFAB91;
-	height: 300px;
-}	
+#login-btn {
+	width: 100px;
+	margin-top: 0;
+	/*margin-right: 15%;*/
+	margin-left: 93%;
+	float: right;
+}
+
+#menu {
+	color: grey;
+	font-family: 'robota' san-serif;
+	font-weight: bold;
+	margin-left: 5%;
+}
+
+/*CLASS STYLES*/
 
 .md-3-line {
 	color: black;
+}
+
+.menu-list {
+	color: black;
+	font-size: 18px;
+	font-weight: lighter;
 }
 
 /*TAG STYLES*/

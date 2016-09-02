@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="google-signin-client_id" content="1095141978516-uqea8udtat0463k3ukomrj1obouacggv.apps.googleusercontent.com">
 	<title>fundsofhope</title>
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="lib/jquery.js"></script>
@@ -9,12 +10,14 @@
 	<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
 	<script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
 	<script type="text/javascript" src="lib/angular-route.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 	<!-- STYLE SHEETS -->
 	<link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.min.css"">
 
 	<!-- CUSTOM STYLES -->
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/btns.min.css">
 
 	<!-- CUSTOM JAVASCRIPTS -->
 	<script type="text/javascript" src="custom-scripts/mainController.js"></script>
@@ -28,34 +31,34 @@
 	    <!-- SIDE NAVBAR -->
 	    <md-sidenav layout="row" id="sidenav" class="md-whiteframe-10dp" md-is-locked-open="true">
 	    	<md-toolbar id="sidetoolbar" flex>
-        		<div class="personInfo">
-        			<md-content flex>
-        				<!-- ADD LOGGINED PERSON'S DETAILS HERE -->
-        			</md-content>
-       			</div>
+	    		<h3 id="menu">Menu</h3>
        			<md-divider></md-divider>
                 <md-list flex>
-       	 			<md-list-item class="md-3-line" href="#/home">
-        				Home
+       	 			<md-list-item class="md-3-line" ng-href="#/home">
+        				<base class="menu-list">Home</span>
         			</md-list-item>
-        			<md-list-item class="md-3-line" href="#/projects">
-        				Project
+        			<md-list-item class="md-3-line" ng-href="#/projects">
+        				<span class="menu-list">Project</span>
         			</md-list-item>
-        			<md-list-item class="md-3-line" href="#/ngos">
-        				Ngos
+        			<md-list-item class="md-3-line" ng-href="#/ngos">
+        				<span class="menu-list">Ngos</span>
         			</md-list-item>
         		</md-list>
             </md-toolbar>
 	    </md-sidenav>
 
 	    <!-- TOOLBAR AND CONTENT CONTAINER -->
-	    <div class="content-box" layout="column" layout-fill flex>
+	    <div class="content-box" layout="column" layout-fill>
 			<!-- TOOLBAR -->
-			<md-toolbar id="toolbar">
-		    	<div class="md-toolbar-tools">
-		        	<a href="#" id="brand-name">Funds Of Hope</a>
-		        </div>
-		    </md-toolbar>
+			<div id="toolbar-container" layout="column">	
+				<md-toolbar id="toolbar" flex>
+			    	<div class="md-toolbar-tools" id="toolbar-tools" layout="row" layout-fill flex ng-controller="login-ctrl">
+			        	<a href="#" id="brand-name">Funds Of Hope</a>
+				        <a class="btn btn--m btn--blue" id="fb-login" ng-click="FbLogin()">Login With Facebook</a>
+	          			<a class="g-signin2" id="g-login" data-onsuccess="onSignIn">Login With google</a>
+			        </div>
+			    </md-toolbar>
+			</div>
 
 		    <!-- CONTENT -->
 			<div layout="column" flex>
