@@ -22,7 +22,7 @@ var app = angular.module('app', ['ngRoute', 'ngMaterial'])
 	// IMPLEMENTING ROUTING
 	app.config([
 		'$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
-			// $locationProvider.html5Mode(true);
+			$locationProvider.html5Mode(false);
 			$routeProvider.when('/home', {
 				templateUrl: 'templates/home.html',
 				controller: 'home-content-ctrl'

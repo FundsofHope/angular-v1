@@ -35,7 +35,7 @@
        			<md-divider></md-divider>
                 <md-list flex>
        	 			<md-list-item class="md-3-line" ng-href="#/home">
-        				<base class="menu-list">Home</span>
+        				<span class="menu-list">Home</span>
         			</md-list-item>
         			<md-list-item class="md-3-line" ng-href="#/projects">
         				<span class="menu-list">Project</span>
@@ -52,10 +52,9 @@
 			<!-- TOOLBAR -->
 			<div id="toolbar-container" layout="column">	
 				<md-toolbar id="toolbar" flex>
-			    	<div class="md-toolbar-tools" id="toolbar-tools" layout="row" layout-fill flex ng-controller="login-ctrl">
+			    	<div class="md-toolbar-tools" id="toolbar-tools" layout="row" layout-fill flex>
 			        	<a href="#" id="brand-name">Funds Of Hope</a>
-				        <a class="btn btn--m btn--blue" id="fb-login" ng-click="FbLogin()">Login With Facebook</a>
-	          			<a class="g-signin2" id="g-login" data-onsuccess="onSignIn">Login With google</a>
+			        	<md-button class="btn btn--s" id="login" ng-click="popDialog($event)" flex-gt-md="auto">Login</md-button>
 			        </div>
 			    </md-toolbar>
 			</div>
