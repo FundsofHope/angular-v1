@@ -77,12 +77,15 @@
 
 /*TAG STYLES*/
 p {
-	margin-top: 0;
+	line-height: 2.5ex;
+  height: 7.5ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+/*	margin-top: 0;
 	overflow-x: auto;
     white-space: nowrap;
     width: 280px;
     font-size: 15px;
-    color: grey;
+    color: grey;*/
 }
 
 h4 {
