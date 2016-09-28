@@ -23,49 +23,102 @@
 	<script type="text/javascript" src="custom-scripts/mainController.js"></script>
 	<script type="text/javascript" src="custom-scripts/appController.js"></script>
 </head>
-<body ng-app="app" layout="column" layout-fill flex>
-	<!-- TOOLBAR AND SIDENAVBAR IMPLEMENTATION HERE -->
+<body ng-app="app" layout="column" layout-fill>
+
+	<div flex="18" style="background-color: orange;">
+		<md-toolbar id="toolbar" class="md-tall" flex>
+			<div class="md-toolbar-tools">
+				<span>Fundsofhope</span>
+			</div>
+		</md-toolbar>
+	</div>
+	<div flex layout="row" layout-fill>
+		<div flex="18" style="background-color: green;">
+			<md-sidenav id="sidenav" md-is-locked-open="true">
+		    	<md-toolbar id="sidetoolbar">
+		    		<div class="menu_heading">
+		    			<h3 id="menu">Menu</h3>
+		    		</div>
+	       			<md-divider style="background-color: #009688;"></md-divider>
+		    		<div class="menu_list">
+		                <md-list>
+		       	 			<md-list-item class="md-3-line" ng-href="#/home">
+		        				<span class="menu-list">Home</span>
+		        			</md-list-item>
+		        			<md-list-item class="md-3-line" ng-href="#/projects">
+		        				<span class="menu-list">Project</span>
+		        			</md-list-item>
+		        			<md-list-item class="md-3-line" ng-href="#/ngos">
+		        				<span class="menu-list">Ngos</span>
+		        			</md-list-item>
+		        		</md-list>
+		    		</div>
+	            </md-toolbar>
+		    </md-sidenav>
+		</div>
+		<div layout="column" layout-fill>
+			 <!-- CONTENT -->
+				<div flex="10" class="false_toolbar"></div>
+				<div flex>
+					<md-content ng-view class="tempaltes">
+						ROUTING TEMPLATES COMES HERE
+					</md-content>
+				</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<!-- TOOLBAR AND SIDENAVBAR IMPLEMENTATION HERE
 
 	<!-- MAIN CONTAINER FIRST BOX -->
-    <div class="container" layout="row" layout-fill flex>
-	    <!-- SIDE NAVBAR -->
-	    <md-sidenav layout="row" id="sidenav" class="md-whiteframe-10dp" md-is-locked-open="true">
-	    	<md-toolbar id="sidetoolbar" flex>
-	    		<h3 id="menu">Menu</h3>
-       			<md-divider></md-divider>
-                <md-list flex>
-       	 			<md-list-item class="md-3-line" ng-href="#/home">
-        				<span class="menu-list">Home</span>
-        			</md-list-item>
-        			<md-list-item class="md-3-line" ng-href="#/projects">
-        				<span class="menu-list">Project</span>
-        			</md-list-item>
-        			<md-list-item class="md-3-line" ng-href="#/ngos">
-        				<span class="menu-list">Ngos</span>
-        			</md-list-item>
-        		</md-list>
-            </md-toolbar>
-	    </md-sidenav>
+    <!-- <div class="container" layout="row"> -->
 
 	    <!-- TOOLBAR AND CONTENT CONTAINER -->
-	    <div class="content-box" layout="column" layout-fill>
-			<!-- TOOLBAR -->
-			<div id="toolbar-container" layout="column">	
-				<md-toolbar id="toolbar" flex>
-			    	<div class="md-toolbar-tools" id="toolbar-tools" layout="row" layout-fill flex>
-			        	<a href="#" id="brand-name">Funds Of Hope</a>
-			        	<md-button class="btn btn--s" id="login" ng-click="popDialog($event)" flex-gt-md="auto">Login</md-button>
-			        </div>
-			    </md-toolbar>
-			</div>
+	    <!-- <div class="content-box" layout="column" layout-fill>
+	    	<div layout="column" layout-fill>
+	    		<md-toolbar id="toolbar" class="md-tall">
+	    			<div class="md-toolbar-tools">
+	    				<span>Fundsofhope</span>
+	    				<span flex></span>
+	    			</div>
+	    		</md-toolbar>
+	    	</div>
 
-		    <!-- CONTENT -->
-			<div layout="column" flex>
-				<md-content ng-view>
-					<!-- ROUTING TEMPLATES COMES HERE -->
-				</md-content>
-			</div>
+		    <div layout="column" layout-fill>
+		    	<div flex="33"> -->
+				    <!-- SIDE NAVBAR -->
+				   <!--  <md-sidenav id="sidenav" class="md-whiteframe-10dp" md-is-locked-open="true">
+				    	<md-toolbar id="sidetoolbar" flex="100">
+				    		<h3 id="menu">Menu</h3>
+			       			<md-divider></md-divider>
+			                <md-list flex>
+			       	 			<md-list-item class="md-3-line" ng-href="#/home">
+			        				<span class="menu-list">Home</span>
+			        			</md-list-item>
+			        			<md-list-item class="md-3-line" ng-href="#/projects">
+			        				<span class="menu-list">Project</span>
+			        			</md-list-item>
+			        			<md-list-item class="md-3-line" ng-href="#/ngos">
+			        				<span class="menu-list">Ngos</span>
+			        			</md-list-item>
+			        		</md-list>
+			            </md-toolbar>
+				    </md-sidenav>
+			    </div> -->
+			    <!-- CONTENT -->
+				<!-- <div flex>
+					<md-content ng-view class="tempaltes">
+						ROUTING TEMPLATES COMES HERE
+					</md-content>
+				</div>
+		    </div>
+
 		</div>
-    </div>
+    </div> -->
 </body>
 </html>
