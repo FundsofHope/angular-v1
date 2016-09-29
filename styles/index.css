@@ -20,11 +20,18 @@
 	background-color: #E0E0E0;
 	color: black;
 }
-.false_toolbar {
-	background-color: #009688;
-	min-height: 118px;
+.input_container {
+	margin-left: auto;
+	margin-top: 6em;
+	color: white;
 }
-.user_image {
+.input_container label {
+	color: white;
+}
+.input_container input {
+	color: white;
+}
+.user_profile_image {
 	position: relative;
 	margin-top: 2em;
     margin-right: 2em;
@@ -32,6 +39,9 @@
     border-style: solid;
     border-width: 3px;
     border-color: white;
+}
+.user_image {
+	margin-left: auto;
 }
 /*CLASS STYLING ENDS*/
 

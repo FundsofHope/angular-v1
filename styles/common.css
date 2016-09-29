@@ -1,0 +1,12 @@
+.card_title {
+	margin-top: 1.5em;
+	margin-left: 1em;
+}
+.intro_card_content {
+	padding-left: 0;
+	margin-left: 1em;
+}
+.false_toolbar {
+	background-color: #009688;
+	min-height: 118px;
+}

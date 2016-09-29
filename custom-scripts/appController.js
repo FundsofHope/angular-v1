@@ -90,7 +90,6 @@ angular.module('app')
 				var descriptions;
 				$http.get('http://api.fundsofhope.org/projects/all').success(function(data){
 				$scope.descriptions = data;
-				console.log(descriptions);
 			})
 		}])
 
