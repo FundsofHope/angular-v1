@@ -1,15 +1,31 @@
-<section layout="row" style="background-color: #E0E0E0" layout-wrap>
+<section layout="row" layout-wrap>
+	<div class="false_toolbar" flex="100"></div>
+
+	<md-card class="about_projects_card">
+		<mad-card-title>
+			<md-card-title-text class="title_text">
+				<span class="md-headline">Card Headline</span><br>
+				<span class="md-subhead">Card Subheading</span>
+			</md-card-title-text>
+		</mad-card-title>
+		<md-card-content>
+			<p class="desc_card_content">
+				lorem ipsum
+			</p>
+		</md-card-content>
+	</md-card>
+
 	<md-card id="project-card" ng-repeat="items in descriptions" flex="23">
 		<img src="images/dummy_image.jpg" class="md-card-image" alt="Washed Out">
-				<h2 id="card-title">{{items.title}}</h2> 
-		<md-card-content>
+		<h2 id="card-title">{{items.title}}</h2> 
+		<md-card-content class="card_content">
 			<h3 id="description">Description</h3>
-			<p>
+			<p class="project_desc">
 				{{items.description}}
 			</p>
 		</md-card-content>
 		<md-card-actions layout="row" layout-align="end center">
-			<md-button>Donate</md-button>
+			<md-button class="md-raised md-warn">Donate</md-button>
 		</md-card-actions>
     </md-card>
 </section>
