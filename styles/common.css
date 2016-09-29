@@ -10,3 +10,14 @@
 	background-color: #009688;
 	min-height: 118px;
 }
+.intro_card {
+	background-color: #81D4FA;
+	margin-left: 2em;
+	margin-right: 2em; 
+	margin-top: -5em;
+	width: 95%;
+	height: 400px;
+}
+.desc_card_content {
+	color: white;
+}

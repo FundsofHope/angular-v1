@@ -1,12 +1,5 @@
 /*CLASS STYLING*/
-.about_company_card {
-	background-color: #81D4FA;
-	margin-left: 2em;
-	margin-right: 2em; 
-	margin-top: -5em;
-	width: 95%;
-	height: 300px;
-}
+
 .md-headline {
 	font-weight: lighter;
 	font-size: 1.5em;
