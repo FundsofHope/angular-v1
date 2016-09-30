@@ -15,7 +15,7 @@
 	min-height: 140px;
 }
 .project_desc {
-	font-size: 15px;
+	font-size: 13px;
 }
 /*CLASS STYLING ENDS*/
 
@@ -35,7 +35,7 @@
 #description {
 	margin-top: 0;
 	margin-bottom: 1em;
-	font-size: 1em;
+	font-size: 18px;
 	font-weight: lighter;
 }
 /*ID STYLING ENDS*/
