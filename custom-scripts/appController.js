@@ -1,15 +1,27 @@
 angular.module('app')
+		
+	//SERVICES
+	.factory('projectsDataFactory', ['$http', 
+		function($http) {
+			return {
+				projectsData: function(){
+					var config = {
+					headers : {
+						'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'        	
+                	}
+				}
+				return $http.get('http://api.fundsofhope.org/projects/all');
+				}
+			}
+		}]) 
 
-	.controller('home-content-ctrl', ['$scope', '$mdDialog', function($scope, $mdDialog){
-		var originatorEv;
-		this.openMenu = function($mdOpenMenu, ev) {
-			originatorEv = ev;
-            $mdOpenMenu(ev);
-            };
+
+	.controller('home-content-ctrl', ['$scope', '$mdDialog', function($scope, $mdDialog) {
+		// HOME CONTROLLER
 	}])	
 
 
-	.controller('login-ctrl', ['$scope', '$http', function($scope, $http){
+	.controller('index-ctrl', ['$scope', '$http', '$mdSidenav', function($scope, $http, $mdSidenav){
 		$scope.FbLogin = function(){
 			FB.login(function(response) {
 			    if (response.authResponse) {
@@ -58,19 +70,43 @@ angular.module('app')
 	  		console.log('Email: ' + profile.getEmail());
 		}
 
-
+        //TOOGLING SIDE NAVBAR
+		$scope.toogleleft = function(){
+			console.log('enter');
+			$mdSidenav('leftNavBar').toggle();
+		}
 	}])
 	
+	.controller('project-ctrl', ['$scope', '$http', '$mdDialog', 'projectsDataFactory',
+		function ($scope, $http, $mdDialog, projectsDataFactory) {
 
+			// BRING DATA FROM API AND PUT IN CARDS
+			projectsDataFactory.projectsData()
+				.success(function(resp, status, headers, scope) {
+					$scope.descriptions = resp;
+				})
+				.error(function() {
+					console.log("error occured");
+				});
 
-	.controller('project-ctrl', ['$scope', '$http',
-		function ($scope, $http){
-				var descriptions;
-				$http.get('http://api.fundsofhope.org/projects/all').success(function(data){
-				$scope.descriptions = data;
-			})
+			// SHOW DIALOG MODEL
+			$scope.showModel = function() {
+				$mdDialog.show({
+					controller: 'project-ctrl',
+					templateUrl: 'templates/projectDialog.html',
+					parent: angular.element(document.body),
+					clickOutsideToClose:true,
+        			fullscreen: $scope.customFullscreen
+				});
+			}
+
 		}])
 
 	.controller('ngo-ctrl', ['$scope', '$http',
 			// NGO CARDs IMPLEMENTATION
 		])
+
+	.controller('wishlist', ['$scope', '$http', 
+		function() {
+			
+		}])

@@ -1,20 +1,25 @@
 /*ID STYLING*/
 #toolbar {
+	padding-top: 1em;
 	background-color: #009688;
 }
-#sidenav {
+#leftNavBar {
 	min-height: 100%;
 	background-color: #E0E0E0 !important;
 }
 #menu {
-	min-height: 3em;
+	min-height: 15em;
+	background-color: #009688;
 }
-
+#menuIcon {
+	cursor: pointer;
+	margin-top: auto;
+}
 /*ID STYLING ENDS*/
 
 /*CLASS STYLING*/
 .menu_heading {
-	background-color: #009688;
+	background-color: #01579B;
 }
 .menu_list {
 	background-color: #E0E0E0;
@@ -33,7 +38,7 @@
 }
 .user_profile_image {
 	position: relative;
-	margin-top: 2em;
+	margin-top: 1em;
     margin-right: 2em;
     border-radius: 50%;
     border-style: solid;

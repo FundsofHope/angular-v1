@@ -8,16 +8,27 @@
 }
 .false_toolbar {
 	background-color: #009688;
-	min-height: 118px;
+	min-height: 180px;
 }
 .intro_card {
-	background-color: #81D4FA;
-	margin-left: 2em;
+	background-color: #00BCD4;
+	margin-left: 10%;
 	margin-right: 2em; 
-	margin-top: -5em;
-	width: 95%;
-	height: 400px;
+	margin-top: -7em;
+	width: 80%;
+	height: 350px;
 }
 .desc_card_content {
 	color: white;
 }
+
+/*DIALOG MODEL STYLING*/
+.projectModel {
+	background-color: white;
+	height: 1000px;
+	width: 1600px;
+}
+.dialogImage {
+	max-height: 400px;
+}
+/*DIALOG MODEL STYLING ENDS*/

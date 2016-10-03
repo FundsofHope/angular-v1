@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngMaterial'])
+var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMdIcons'])
 
 	// INITIATING FB FUNTION ASYNHRONOUSLY
 	window.fbAsyncInit = function() {
@@ -32,6 +32,9 @@ var app = angular.module('app', ['ngRoute', 'ngMaterial'])
 			}).when('/ngos', {
 				templateUrl: 'templates/ngo.html',
 				controller: 'ngo-ctrl'
+			}).when('/wishlist', {
+				templateUrl: 'templates/wishlist.html',
+				controller: 'wishlist-ctrl'
 			}).otherwise({
 				redirectTo: '/home'
 			});
