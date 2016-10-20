@@ -1,0 +1,24 @@
+{
+  "name": "fundsofhope",
+  "description": "Fundsofhope Frontend",
+  "main": "index.html",
+  "authors": [
+    "addiittya2006"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "foh",
+    "fundsofhope",
+    "fundraising",
+    "ngo"
+  ],
+  "homepage": "https://github.com/nikhilsangwan007/foh",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

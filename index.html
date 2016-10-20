@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="google-signin-client_id" content="1095141978516-uqea8udtat0463k3ukomrj1obouacggv.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content="1095141978516-uqea8udtat0463k3ukomrj1obouacggv.apps.googleusercontent.com" />
 	<title>fundsofhope</title>
-	<!-- SCRIPTS -->
-	<script type="text/javascript" src="lib/jquery.js"></script>
-	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-	<script type="text/javascript" src="node_modules/angular-material/angular-material.min.js"></script>
-	<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
-	<script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
-	<script type="text/javascript" src="lib/angular-route.min.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
 
-	<!-- STYLE SHEETS -->
-	<link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.min.css"">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
+	<!-- External Asset Inport -->
 
-	<!-- CUSTOM STYLES -->
-	<link rel="stylesheet" type="text/css" href="styles/index.css">
-	<link rel="stylesheet" type="text/css" href="styles/project_page.css">
-	<link rel="stylesheet" type="text/css" href="styles/home_page.css">
-	<link rel="stylesheet" type="text/css" href="styles/common.css">
-	<link rel="stylesheet" type="text/css" href="styles/btns.min.css">
+		<!-- Scripts -->
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-material/angular-material.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
+		<script type="text/javascript" src="scripts/angular-route.min.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.min.css"">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
 
-	<!-- CUSTOM JAVASCRIPTS -->
-	<script type="text/javascript" src="custom-scripts/mainController.js"></script>
-	<script type="text/javascript" src="custom-scripts/appController.js"></script>
+	<!-- Custom Asset Import -->
+	
+	<!-- Custom Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
+		<link rel="stylesheet" type="text/css" href="styles/project.css">
+		<link rel="stylesheet" type="text/css" href="styles/home.css">
+		<link rel="stylesheet" type="text/css" href="styles/common.css">
+		<link rel="stylesheet" type="text/css" href="styles/btns.min.css">
+		<!-- Custom JS -->
+			<!-- Controller Import -->
+			<script type="text/javascript" src="scripts/controllers/mainController.js"></script>
+			<script type="text/javascript" src="scripts/controllers/appController.js"></script>
+
 </head>
 <body ng-app="app" layout="column" layout-fill>
 
@@ -38,7 +43,7 @@
 				<span style="font-weight: bold; font-size: 1.5em; color: white; margin-top: 1em; margin-left: 1em;"><a href="#">Fundsofhope</a></span>
 				<span style="margin-left: auto; margin-top: auto; margin-right: 2em; color: white; cursor: pointer;" ng-click="null" ng-if="false">Login</span>
 				<md-menu ng-if="true">
-					<a href="#" class="user_image"><img class="user_profile_image" ng-click="$mdOpenMenu($event)" src="images/dummy_image.jpg" height="50px" 	width="50px"></a>
+					<a href="#" class="user_image"><img class="user_profile_image" ng-click="$mdOpenMenu($event)" src="data/images/student.jpg" height="50px" width="50px"></a>
 					<md-menu-content width="3" >
 						<md-menu-item ng-repeat="item in ['View Profile', 'Settings', 'Logout']">
 							<md-button ng-click="ctrl.menuItemClick($index)">
