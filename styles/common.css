@@ -22,6 +22,10 @@
 	color: white;
 }
 
+*:focus {
+	outline: none;
+}
+
 /*DIALOG MODEL STYLING*/
 .projectModel {
 	background-color: white;
