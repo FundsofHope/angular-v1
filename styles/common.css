@@ -4,7 +4,7 @@
 }
 .intro_card_content {
 	padding-left: 0;
-	margin-left: 1em;
+	margin: auto;
 }
 .false_toolbar {
 	background-color: #009688;
@@ -20,6 +20,9 @@
 }
 .desc_card_content {
 	color: white;
+}
+.commonMaterialContainer {
+	margin: auto;
 }
 
 *:focus {
