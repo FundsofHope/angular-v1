@@ -23,7 +23,9 @@
 #project-card {
 	width: 340px;
 	height: 400px;
-	margin-left: 5em;
+	margin: auto;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 	cursor: pointer;
 }
 #card-title {

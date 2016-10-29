@@ -72,7 +72,6 @@ angular.module('app')
 
         //TOOGLING SIDE NAVBAR
 		$scope.toogleleft = function(){
-			console.log('enter');
 			$mdSidenav('leftNavBar').toggle();
 		}
 	}])
