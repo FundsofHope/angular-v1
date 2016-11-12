@@ -22,7 +22,10 @@ var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMdIcons'])
 	// IMPLEMENTING ROUTING
 	app.config([
 		'$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
-			$locationProvider.html5Mode(false);
+			$locationProvider.html5Mode({
+				enabled: false,
+				requireBase: false
+			});
 			$routeProvider.when('/home', {
 				templateUrl: 'templates/home.html',
 				controller: 'home-content-ctrl'
@@ -32,6 +35,9 @@ var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMdIcons'])
 			}).when('/ngos', {
 				templateUrl: 'templates/ngo.html',
 				controller: 'ngo-ctrl'
+			}).when('/donate', {
+				templateUrl: 'templates/donationPage.html',
+				controller: 'donation-ctrl'
 			}).when('/wishlist', {
 				templateUrl: 'templates/wishlist.html',
 				controller: 'wishlist-ctrl'

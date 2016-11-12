@@ -76,8 +76,8 @@ angular.module('app')
 		}
 	}])
 	
-	.controller('project-ctrl', ['$scope', '$http', '$mdDialog', 'projectsDataFactory',
-		function ($scope, $http, $mdDialog, projectsDataFactory) {
+	.controller('project-ctrl', ['$scope', '$http', '$mdDialog', '$location', 'projectsDataFactory',
+		function ($scope, $http, $mdDialog, $location, projectsDataFactory) {
 
 			// BRING DATA FROM API AND PUT IN CARDS
 			projectsDataFactory.projectsData()
@@ -99,10 +99,20 @@ angular.module('app')
 				});
 			}
 
+			// redirect to donation template
+			$scope.donationPage = function() {
+				console.log("enter");
+				$location.path('/donate');
+			}
+
 		}])
 
 	.controller('ngo-ctrl', ['$scope', '$http',
 			// NGO CARDs IMPLEMENTATION
+		])
+
+	.controller('donation-ctrl', ['$scope', 
+			// DOANTION IMPLAMENTATION
 		])
 
 	.controller('wishlist', ['$scope', '$http', 

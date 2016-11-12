@@ -22,14 +22,17 @@
 /*ID STYLING*/
 #project-card {
 	width: 340px;
-	height: 400px;
+	height: 420px;
 	margin: auto;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
 	cursor: pointer;
 }
+#project-card-actions {
+	margin: auto;
+}
 #card-title {
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-left: 16px;
 	margin-bottom: 0px;
 	font-size: 1em;
@@ -40,6 +43,16 @@
 	margin-bottom: 1em;
 	font-size: 18px;
 	font-weight: lighter;
+}
+#add-icon svg {
+	float: right;
+	margin-top: -21px;
+	margin-right: 8px;
+	background-color: #FF5722;
+	border-radius: 1em;
+}
+#donate-button {
+	margin: auto;
 }
 /*ID STYLING ENDS*/
 
