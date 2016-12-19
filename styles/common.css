@@ -31,11 +31,20 @@
 
 /*DIALOG MODEL STYLING*/
 .projectModel {
+	object-fit: cover;
 	background-color: white;
-	height: 1000px;
-	width: 1600px;
+	min-height: 95% !important;
+	min-width: 95% !important;
+}
+.dialogToolbar {
+	background-color: #009688 !important;
 }
 .dialogImage {
 	max-height: 400px;
+}
+.dialogCancelButton {
+	margin-top: 10px !important;
+	padding: inherit !important;
+	float: right;
 }
 /*DIALOG MODEL STYLING ENDS*/

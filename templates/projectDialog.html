@@ -1,3 +1,16 @@
-<md-dialog class="projectModel">
-	<img  class="dialogImage" src="data/images/1.jpg">
+<md-dialog class="projectModel" ng-controller="project-ctrl">
+	<md-toolbar class="dialogToolbar">
+		<div>
+			<md-button class="md-icon-button dialogCancelButton" ng-click="cancel()">
+				<ng-md-icon icon="cancel" style="fill: white" size="36px"></ng-md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<img class="dialogImage" src="data/images/1.jpg">
+	<md-content>
+		<h2>{{descriptions.title}}</h2>
+	</md-content>
+	<md-dialog-actions layout="row">
+		<md-button class="donationButton md-raised md-warn">DONATE</md-button>
+	</md-dialog-actions>
 </md-dialog>

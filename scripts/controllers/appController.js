@@ -10,7 +10,7 @@ angular.module('app')
 						'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'        	
                 	}
 				}
-				return $http.get('http://api.fundsofhope.org/projects/all');
+				return $http.get('http://api.fundsofhope.org/project');
 				}
 			}
 		}]) 
@@ -25,24 +25,25 @@ angular.module('app')
 		$scope.FbLogin = function(){
 			FB.login(function(response) {
 			    if (response.authResponse) {
-			    	FB.api('/me?fields=first_name,picture,last_name,email', function(response) {    		       
+			    	FB.api('/me?fields=first_name,picture,last_name,friends,likes', function(response) {    		       
 				    	console.log('Good to see you, ' + response.first_name + '.');
 				    	console.log(response.picture.data.url);
 					    console.log(response.picture);
 					    console.log(response.id);
-					    console.log(response.email);
+					    console.log(response.friends);
+					    console.log(response.likes);
 					    var data = $.param({
-			                id: response.id,
+			                phoneNo: "8447858705",
 			                firstname: response.first_name,
-			                lastname: response.last_name,
-			                email: ""
+			                googleCred: response.id,
+			                email: "nikhil.sangwan95@gmail.com"
 			            	});
 				        var config = {
 		                	headers : {
 		                    	'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
 		                	}
 		            	}
-		            	$http.post('api.fundsofhope.org/signup/', data, config)
+		            	$http.post('http://api.fundsofhope.org/user/signup/', data, config)
 		            		.success(function (data, status, headers, config) {
 		            			console.log(data);
 		                		$scope.PostDataResponse = data;
@@ -97,6 +98,11 @@ angular.module('app')
 					clickOutsideToClose:true,
         			fullscreen: $scope.customFullscreen
 				});
+			}
+
+			// CLOSE MODEL
+			$scope.cancel =function() {
+				$mdDialog.cancel();
 			}
 
 		}])

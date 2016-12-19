@@ -3,7 +3,7 @@ var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMdIcons'])
 	// INITIATING FB FUNTION ASYNHRONOUSLY
 	window.fbAsyncInit = function() {
 	    FB.init({ 
-	      appId: '1525793961071513',
+	      appId: '1780049375589719',
 	      status: true, 
 	      cookie: true, 
 	      xfbml: true,

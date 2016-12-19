@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta name="google-signin-client_id" content="1095141978516-uqea8udtat0463k3ukomrj1obouacggv.apps.googleusercontent.com" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>fundsofhope</title>
 
 	<!-- External Asset Inport -->
@@ -41,8 +42,8 @@
 			<div class="md-toolbar-tools" flex>
 				<ng-md-icon id="menuIcon" ng-click="toogleleft()" icon="menu" style="fill: white" size="30"></ng-md-icon> 
 				<span style="font-weight: bold; font-size: 1.5em; color: white; margin-top: 1em; margin-left: 1em;"><a href="#">Fundsofhope</a></span>
-				<span style="margin-left: auto; margin-top: auto; margin-right: 2em; color: white; cursor: pointer;" ng-click="null" ng-if="false">Login</span>
-				<md-menu ng-if="true">
+				<span style="margin-left: auto; margin-top: auto; margin-right: 2em; color: white; cursor: pointer;" ng-click="FbLogin()" ng-if="true">Login</span>
+				<md-menu ng-if="false">
 					<a href="#" class="user_image"><img class="user_profile_image" ng-click="$mdOpenMenu($event)" src="data/images/student.jpg" height="50px" width="50px"></a>
 					<md-menu-content width="3" >
 						<md-menu-item ng-repeat="item in ['View Profile', 'Settings', 'Logout']">
