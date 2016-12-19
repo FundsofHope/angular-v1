@@ -1,16 +1,14 @@
 <md-dialog class="projectModel" ng-controller="project-ctrl">
-	<md-toolbar class="dialogToolbar">
-		<div>
-			<md-button class="md-icon-button dialogCancelButton" ng-click="cancel()">
-				<ng-md-icon icon="cancel" style="fill: white" size="36px"></ng-md-icon>
-			</md-button>
-		</div>
-	</md-toolbar>
-	<img class="dialogImage" src="data/images/1.jpg">
-	<md-content>
-		<h2>{{descriptions.title}}</h2>
-	</md-content>
+	<img class="dialogImage" ng-src="http://api.fundsofhope.org{{projectData.header}}" alt="washed out">
+	<h3 class="dialogProjectTitle">{{projectData.title}}</h3>
+	<md-dialog-content >
+		<md-content class="projectDesc">
+			<h4 class="dialogProjectDesc">About</h4>
+			<h5 class="dialogProjectDesc">Project cost: {{projectData.cost}}</h5>
+		</md-content>
+	</md-dialog-content>
 	<md-dialog-actions layout="row">
-		<md-button class="donationButton md-raised md-warn">DONATE</md-button>
+		<md-button class="donationButton md-raised md-warn" ng-click="null">DONATE</md-button>
+		<md-button class="md-raised md-warn" ng-click="cancel()">CLOSE</md-button>
 	</md-dialog-actions>
 </md-dialog>

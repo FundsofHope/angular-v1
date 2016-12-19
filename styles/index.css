@@ -37,6 +37,7 @@
 	color: white;
 }
 .user_profile_image {
+	object-fit: cover;
 	position: relative;
 	margin-top: 1em;
     margin-right: 2em;

@@ -17,12 +17,17 @@
 .project_desc {
 	font-size: 14px;
 }
+.projectImg {
+	object-fit: cover;
+	width: 340px;
+	height: 200px;
+}
 /*CLASS STYLING ENDS*/
 
 /*ID STYLING*/
 #project-card {
 	width: 340px;
-	height: 400px;
+	height: 250px;
 	margin: auto;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
@@ -31,7 +36,7 @@
 #card-title {
 	margin-top: 10px;
 	margin-left: 16px;
-	margin-bottom: 0px;
+	margin-bottom: 12px;
 	font-size: 1em;
 	font-weight: bold;
 }

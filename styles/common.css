@@ -40,11 +40,20 @@
 	background-color: #009688 !important;
 }
 .dialogImage {
+	object-fit: cover;
+	min-height: 400px;
 	max-height: 400px;
 }
-.dialogCancelButton {
-	margin-top: 10px !important;
-	padding: inherit !important;
-	float: right;
+.projectDesc {
+	min-height: 260px !important;
+}
+.dialogProjectTitle {
+	margin-top: -35px;
+    color: whitesmoke;
+    margin-left: 10px;
+}
+.dialogProjectDesc {
+	margin-left: 10px;
+    margin-top: auto;
 }
 /*DIALOG MODEL STYLING ENDS*/

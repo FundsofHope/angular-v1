@@ -16,18 +16,10 @@
 	</md-card>
 	
 	<div class="commonMaterialContainer" layout="row" layout-wrap flex="80">	
-		<md-card id="project-card" ng-repeat="items in descriptions" flex="23">
-			<img src="data/images/sri.jpg" class="md-card-image" alt="Washed Out">
+		<md-card id="project-card" ng-repeat="items in descriptions" flex="23" ng-click="showModel(items)">
+			<img ng-src="http://api.fundsofhope.org{{items.header}}" class="projectImg" alt="Washed Out">
 			<h2 id="card-title">{{items.title}}</h2> 
-			<md-card-content class="card_content" ng-click="showModel()">
-				<h3 id="description">Description</h3>
-				<p class="project_desc">
-					{{items.description}}
-				</p>
-			</md-card-content>
-			<md-card-actions layout="row" layout-align="end center">
-				<md-button class="md-raised md-warn">Donate</md-button>
-			</md-card-actions>
+			<md-progress-linear md-mode="determinate" value="73"></md-progress-linear>
 	    </md-card>
 	</div>	
 </section>

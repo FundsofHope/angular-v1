@@ -21,23 +21,25 @@ angular.module('app')
 	}])	
 
 
-	.controller('index-ctrl', ['$scope', '$http', '$mdSidenav', function($scope, $http, $mdSidenav){
+	.controller('index-ctrl', ['$scope', '$http', '$mdSidenav', '$cookieStore', function($scope, $http, $mdSidenav, $cookieStore){
 		$scope.FbLogin = function(){
 			FB.login(function(response) {
 			    if (response.authResponse) {
-			    	FB.api('/me?fields=first_name,picture,last_name,friends,likes', function(response) {    		       
+			    	FB.api('/me?fields=first_name,picture,last_name,friends,likes', function(response) {  
+			    		$scope.userInfo = response;
+			    		console.log($scope.userInfo.first_name);  		       
 				    	console.log('Good to see you, ' + response.first_name + '.');
-				    	console.log(response.picture.data.url);
-					    console.log(response.picture);
-					    console.log(response.id);
-					    console.log(response.friends);
-					    console.log(response.likes);
-					    var data = $.param({
-			                phoneNo: "8447858705",
-			                firstname: response.first_name,
-			                googleCred: response.id,
-			                email: "nikhil.sangwan95@gmail.com"
-			            	});
+				    	// console.log(response.picture.data.url);
+					    // console.log(response.picture);
+					    // console.log(response.id);
+					    // console.log(response.friends);
+					    // console.log(response.likes);
+					    var data = {
+			                "phoneNo": "8447858705",
+			                "name": response.first_name,
+			                "googleCred": response.id,
+			                "email": "nikhil.sangwan95@gmail.com"
+			            	};
 				        var config = {
 		                	headers : {
 		                    	'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
@@ -45,8 +47,8 @@ angular.module('app')
 		            	}
 		            	$http.post('http://api.fundsofhope.org/user/signup/', data, config)
 		            		.success(function (data, status, headers, config) {
-		            			console.log(data);
 		                		$scope.PostDataResponse = data;
+		                		$cookieStore.put('user_id', data.user_id);
 		            		})
 		            		.error(function (data, status, header, config) {
 		                		$scope.ResponseDetails = "Data: " + data +
@@ -72,9 +74,23 @@ angular.module('app')
 		}
 
         //TOOGLING SIDE NAVBAR
-		$scope.toogleleft = function(){
+		$scope.toogleleft = function() {
 			$mdSidenav('leftNavBar').toggle();
 		}
+
+		// GET COOKIE NAMED USER_ID
+		$scope.getUser = function() {
+			if($cookieStore.get('user_id') == 6){
+				return true;
+			}else {
+				return false;
+			}
+		}
+
+		// LOGOUT
+		$scope.logout = function() {
+			$cookieStore.remove('user_id');
+		} 
 	}])
 	
 	.controller('project-ctrl', ['$scope', '$http', '$mdDialog', 'projectsDataFactory',
@@ -90,14 +106,20 @@ angular.module('app')
 				});
 
 			// SHOW DIALOG MODEL
-			$scope.showModel = function() {
+			$scope.showModel = function(items) {
+				// $scope.projectData = items;
 				$mdDialog.show({
-					controller: 'project-ctrl',
+					locals: {datatopass: items},
+					controller: dialogController,
 					templateUrl: 'templates/projectDialog.html',
 					parent: angular.element(document.body),
 					clickOutsideToClose:true,
         			fullscreen: $scope.customFullscreen
 				});
+				function dialogController ($scope, datatopass) { 
+				    $scope.projectData = datatopass;  
+					// console.log($scope.projectData);
+				}
 			}
 
 			// CLOSE MODEL
