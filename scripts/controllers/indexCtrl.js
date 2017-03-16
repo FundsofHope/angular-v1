@@ -1,27 +1,31 @@
-angular.module('app')
-		
-	//SERVICES
-	.factory('projectsDataFactory', ['$http', 
-		function($http) {
-			return {
-				projectsData: function(){
-					var config = {
-					headers : {
-						'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'        	
-                	}
-				}
-				return $http.get('https://api.fundsofhope.org/project');
-				}
-			}
-		}]) 
-
-
-	.controller('home-content-ctrl', ['$scope', '$mdDialog', function($scope, $mdDialog) {
-		// HOME CONTROLLER
-	}])	
+angular.module('indexCtrl', []) 	
 
 
 	.controller('index-ctrl', ['$scope', '$http', '$mdSidenav', '$cookieStore', function($scope, $http, $mdSidenav, $cookieStore){
+
+
+	// INITIATING FB FUNTION ASYNHRONOUSLY
+	window.fbAsyncInit = function() {
+	    FB.init({ 
+	      appId: '1780049375589719',
+	      status: true, 
+	      cookie: true, 
+	      xfbml: true,
+	      version: 'v2.4'
+	    });
+	};
+
+	(function(d, s, id){
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) {return;}
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/en_US/sdk.js";
+	    fjs.parentNode.insertBefore(js, fjs); 
+		}(document, 'script', 'facebook-jssdk'));
+
+
+
+
 		$scope.FbLogin = function(){
 			FB.login(function(response) {
 			    if (response.authResponse) {
@@ -93,47 +97,8 @@ angular.module('app')
 		} 
 	}])
 	
-	.controller('project-ctrl', ['$scope', '$http', '$mdDialog', 'projectsDataFactory',
-		function ($scope, $http, $mdDialog, projectsDataFactory) {
+	
 
-			// BRING DATA FROM API AND PUT IN CARDS
-			projectsDataFactory.projectsData()
-				.success(function(resp, status, headers, scope) {
-					$scope.descriptions = resp;
-				})
-				.error(function() {
-					console.log("error occured");
-				});
+	
 
-			// SHOW DIALOG MODEL
-			$scope.showModel = function(items) {
-				// $scope.projectData = items;
-				$mdDialog.show({
-					locals: {datatopass: items},
-					controller: dialogController,
-					templateUrl: 'templates/projectDialog.html',
-					parent: angular.element(document.body),
-					clickOutsideToClose:true,
-        			fullscreen: $scope.customFullscreen
-				});
-				function dialogController ($scope, datatopass) { 
-				    $scope.projectData = datatopass;  
-					// console.log($scope.projectData);
-				}
-			}
-
-			// CLOSE MODEL
-			$scope.cancel =function() {
-				$mdDialog.cancel();
-			}
-
-		}])
-
-	.controller('ngo-ctrl', ['$scope', '$http',
-			// NGO CARDs IMPLEMENTATION
-		])
-
-	.controller('wishlist', ['$scope', '$http', 
-		function() {
-			
-		}])
+	

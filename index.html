@@ -3,107 +3,64 @@
 <head>
 	<meta name="google-signin-client_id" content="1095141978516-uqea8udtat0463k3ukomrj1obouacggv.apps.googleusercontent.com" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>fundsofhope</title>
-
-	<!-- External Asset Inport -->
-
-		<!-- Scripts -->
-		<script type="text/javascript" src="scripts/jquery.js"></script>
-		<script type="text/javascript" src="scripts/lib/angular/angular.min.js"></script>
-		<script type="text/javascript" src="scripts/lib/angular-material/angular-material.min.js"></script>
-		<script type="text/javascript" src="scripts/lib/angular-animate/angular-animate.min.js"></script>
-		<script type="text/javascript" src="scripts/lib/angular-aria/angular-aria.min.js"></script>
-		<script type="text/javascript" src="scripts/angular-route.min.js"></script>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
-    	<script type="text/javascript" src="scripts/angular-cookies.min.js"></script>
-
-		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="scripts/lib/angular-material/angular-material.min.css"">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
-
-	<!-- Custom Asset Import -->
-	
-	<!-- Custom Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="styles/index.css">
-		<link rel="stylesheet" type="text/css" href="styles/project.css">
-		<link rel="stylesheet" type="text/css" href="styles/home.css">
-		<link rel="stylesheet" type="text/css" href="styles/common.css">
-		<link rel="stylesheet" type="text/css" href="styles/btns.min.css">
-		<!-- Custom JS -->
-			<!-- Controller Import -->
-			<script type="text/javascript" src="scripts/controllers/mainController.js"></script>
-			<script type="text/javascript" src="scripts/controllers/appController.js"></script>
+	<title>fundsofhope</title>		
 
 </head>
 <body ng-app="app" layout="column" layout-fill>
 
-	<div flex="18" ng-controller="index-ctrl">
-		<md-toolbar id="toolbar" class="md-tall" flex>
-			<div class="md-toolbar-tools" flex>
-				<ng-md-icon id="menuIcon" ng-click="toogleleft()" icon="menu" style="fill: white" size="30"></ng-md-icon> 
-				<span style="font-weight: bold; font-size: 1.5em; color: white; margin-top: 1em; margin-left: 1em;"><a href="#">Fundsofhope</a></span>
-				<span style="margin-left: auto; margin-top: auto; margin-right: 2em; color: white; cursor: pointer;" ng-click="FbLogin()" ng-if="!getUser()">Login</span>
-				<!-- <span ng-if="getUser()">{{userInfo.first_name}}</span> -->
-				<md-menu ng-if="getUser()">
-					<a href="#" class="user_image"><img class="user_profile_image" ng-click="$mdOpenMenu($event)" src="data/images/student.jpg" height="50px" width="50px"></a>
-					<md-menu-content width="3" >
-						<md-menu-item>
-							<md-button ng-click="null">
-								View Profile
-							</md-button>
-						</md-menu-item>
-						<md-menu-item>
-							<md-button ng-click="null">
-								Settings
-							</md-button>
-						</md-menu-item>
-						<md-menu-item>
-							<md-button ng-click="logout()">
-								Log Out
-							</md-button>
-						</md-menu-item>
-					</md-menu-content>
-				</md-menu>
-			</div>
-		</md-toolbar>
-	</div>
+	<tool-bar></tool-bar>
+
 	<div flex layout="row" layout-fill>
-		<div flex="18">
-			<md-sidenav id="leftNavBar" md-component-id="leftNavBar" class="md-sidenav-left md-whiteframe-4dp">
-		    	<md-toolbar id="sidetoolbar">
-		    		<div class="menu_heading">
-		    			<div id="menu"></div>
-		    		</div>
-	       			<md-divider style="background-color: #009688;"></md-divider>
-		    		<div class="menu_list">
-		                <md-list>
-		       	 			<md-list-item class="md-3-line" ng-href="#/home">
-		        				<span class="menu-list">Home</span>
-		        			</md-list-item>
-		        			<md-list-item class="md-3-line" ng-href="#/projects">
-		        				<span class="menu-list">Project</span>
-		        			</md-list-item>
-		        			<md-list-item class="md-3-line" ng-href="#/ngos">
-		        				<span class="menu-list">Ngos</span>
-		        			</md-list-item>
-		        			<md-list-item class="md-3-line" ng-href="#/wishlist">
-		        				<span class="menu-list">WishList</span>
-		        			</md-list-item>
-		        		</md-list>
-		    		</div>
-	            </md-toolbar>
-		    </md-sidenav>
-		</div>
+		<side-nav></side-nav>
 		<div layout="column" layout-fill>
-			 <!-- CONTENT -->
-				<div flex>
-					<md-content ng-view class="tempaltes">
-						ROUTING TEMPLATES COMES HERE
-					</md-content>
-				</div>
+		 	<!-- CONTENT -->
+			<div flex>
+				<md-content ng-view class="tempaltes">
+					LOADING....
+				</md-content>
+			</div>
 		</div>
 	</div>
+
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="scripts/lib/jquery.js"></script>
+	<script type="text/javascript" src="scripts/lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/angular-material/angular-material.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/angular-animate/angular-animate.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/angular-aria/angular-aria.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/angular-route.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/angular-cookies.min.js"></script>
+
+	<!-- Controller services and directives Import -->
+	<script type="text/javascript" src="/scripts/main.js"></script>
+	<script type="text/javascript" src="/scripts/controllers/indexCtrl.js"></script>
+	<script type="text/javascript" src="/scripts/controllers/projectCtrl.js"></script>
+	<script type="text/javascript" src="/scripts/controllers/homeContentCtrl.js"></script>
+	<script type="text/javascript" src="/scripts/controllers/ngoCtrl.js"></script>
+	<script type="text/javascript" src="/scripts/controllers/wishlistCtrl.js"></script>
+	<script type="text/javascript" src="/scripts/services/projectsService.js"></script>
+	<script type="text/javascript" src="/scripts/directives/allDirectives.js"></script>
+	<script type="text/javascript" src="/scripts/route.js"></script>
+
+	<!-- External Asset Inport -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="scripts/lib/angular-material/angular-material.min.css"">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
+
+	<!-- Custom Asset Import -->
+
+	<!-- Custom Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="stylesheet" type="text/css" href="styles/project.css">
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<link rel="stylesheet" type="text/css" href="styles/btns.min.css">	
+
 </body>
 </html>

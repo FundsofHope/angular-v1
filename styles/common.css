@@ -1,3 +1,20 @@
+.brandName {
+	font-weight: 400;
+	font-size: 1.5em; 
+	color: white;  
+	margin-left: 1em;
+}
+.brandName a span {
+	font-style: italic;
+	font-weight: 20 !important;
+	font-size: 1.6em;
+}
+.loginBtn {
+	color: white; 
+	cursor: pointer;
+	margin-left: auto; 
+	margin-right: 2em; 
+}
 .card_title {
 	margin-top: 1.5em;
 	margin-left: 1em;
@@ -6,17 +23,16 @@
 	padding-left: 0;
 	margin: auto;
 }
-.false_toolbar {
-	background-color: #009688;
-	min-height: 180px;
-}
 .intro_card {
-	background-color: #00BCD4;
+	background: -webkit-radial-gradient(#4DB6AC, #00796B);
+	background: -o-radial-gradient(#4DB6AC, #00796B);
+	background: -moz-radial-gradient(#4DB6AC, #00796B);
 	margin-left: 10%;
 	margin-right: 2em; 
-	margin-top: -7em;
 	width: 80%;
-	height: 350px;
+	height: 250px;
+	position: absolute;
+	top: 140px;
 }
 .desc_card_content {
 	color: white;
@@ -57,3 +73,9 @@
     margin-top: auto;
 }
 /*DIALOG MODEL STYLING ENDS*/
+
+@media only screen and (max-width: 500px) {
+	.brandName {
+		font-size: 1em;
+	}
+}
