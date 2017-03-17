@@ -1,4 +1,4 @@
-<section layout="row" class="section" layout-wrap>
+<section layout="row" class="section" layout-wrap flex>
 	<md-card class="intro_card">
 		<mad-card-title class="card_title">
 			<md-card-title-text class="title_text">
@@ -12,12 +12,12 @@
 			</p>
 		</md-card-content>
 	</md-card>
-	
+	<div style="display: block; clear: both;"></div>
 	<div class="commonMaterialContainer" layout="row" layout-wrap flex="80">	
 		<md-card id="project-card" ng-repeat="items in descriptions" flex="23" ng-click="showModel(items)">
 			<img ng-src="http://api.fundsofhope.org{{items.header}}" class="projectImg" alt="Washed Out">
 			<h2 id="card-title">{{items.title}}</h2> 
-			<md-progress-linear md-mode="determinate" value="73"></md-progress-linear>
+			<md-progress-linear md-mode="determinate" value="53"></md-progress-linear>
 	    </md-card>
 	</div>	
 </section>

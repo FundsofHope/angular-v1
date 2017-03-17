@@ -1,6 +1,6 @@
 angular.module('wishlistCtrl', [])
 
-	.controller('wishlist', ['$scope', '$http', 
-		function() {
+	.controller('wishlist-ctrl', ['$scope', '$http', 
+		function($scope) {
 			
 		}])

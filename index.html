@@ -3,22 +3,24 @@
 <head>
 	<meta name="google-signin-client_id" content="1095141978516-uqea8udtat0463k3ukomrj1obouacggv.apps.googleusercontent.com" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset = "UTF-8">
 	<title>fundsofhope</title>		
 
 </head>
 <body ng-app="app" layout="column" layout-fill>
 
-	<tool-bar></tool-bar>
-
+	<div flex="18" ng-controller="index-ctrl">
+		<tool-bar></tool-bar>
+	</div>
+		
 	<div flex layout="row" layout-fill>
 		<side-nav></side-nav>
-		<div layout="column" layout-fill>
+		<div layout="row" layout-fill>
 		 	<!-- CONTENT -->
-			<div flex>
 				<md-content ng-view class="tempaltes">
 					LOADING....
 				</md-content>
-			</div>
 		</div>
 	</div>
 

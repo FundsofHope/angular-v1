@@ -1,5 +1,5 @@
 angular.module('ngoCtrl', [])
 
-	.controller('ngo-ctrl', ['$scope', '$http',
-			// NGO CARDs IMPLEMENTATION
-		])
+	.controller('ngo-ctrl', ['$scope', '$http', function ($scope) {
+
+	}])
