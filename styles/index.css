@@ -16,6 +16,9 @@
 	background-color: #E0E0E0 !important;
 }
 #menu {
+	background: -webkit-radial-gradient(#2196F3, #1976D2);
+	background: -o-radial-gradient(#2196F3, #1976D2);
+	background: -moz-radial-gradient(#2196F3, #1976D2);
 	min-height: 15em;
 	background-color: #009688;
 }
