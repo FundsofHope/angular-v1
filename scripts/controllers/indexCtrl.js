@@ -78,9 +78,11 @@ angular.module('indexCtrl', [])
 		}
 
         //TOOGLING SIDE NAVBAR
-		$scope.toogleleft = function() {
+		$scope.toogleLeft = function() {
 			$mdSidenav('leftNavBar').toggle();
 		}
+
+		
 
 		// GET COOKIE NAMED USER_ID
 		$scope.getUser = function() {

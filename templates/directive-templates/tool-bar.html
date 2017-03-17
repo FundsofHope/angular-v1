@@ -1,10 +1,10 @@
 <md-toolbar id="toolbar" class="md-tall" flex>
 	<div class="md-toolbar-tools" flex>
-		<ng-md-icon id="menuIcon" ng-click="toogleleft()" icon="menu" style="fill: white" size="30"></ng-md-icon> 
+		<ng-md-icon id="menuIcon" ng-click="toogleLeft()" icon="menu" style="fill: white" size="30"></ng-md-icon> 
 		<span class="brandName"><a href="#">Funds<span>OfHope</span></a></span>
-		<span class="loginBtn" ng-click="FbLogin()" ng-if="!getUser()">Login</span>
+		<span class="loginBtn" ng-click="FbLogin()" ng-if="getUser()">Login</span>
 		<!-- <span ng-if="getUser()">{{userInfo.first_name}}</span> -->
-		<md-menu ng-if="getUser()">
+		<md-menu ng-if="!getUser()">
 			<a href="#" class="user_image"><img class="user_profile_image" ng-click="$mdOpenMenu($event)" src="data/images/student.jpg" height="50px" width="50px"></a>
 			<md-menu-content width="3" >
 				<md-menu-item>

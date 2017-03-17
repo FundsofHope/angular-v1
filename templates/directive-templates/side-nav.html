@@ -1,4 +1,4 @@
-<div flex="18">
+<div flex="20" ng-controller="home-content-ctrl">
 	<md-sidenav id="leftNavBar" md-component-id="leftNavBar" class="md-sidenav-left md-whiteframe-4dp">
     	<md-toolbar id="sidetoolbar">
     		<div class="menu_heading">
@@ -7,16 +7,16 @@
    			<md-divider style="background-color: #009688;"></md-divider>
     		<div class="menu_list">
                 <md-list>
-       	 			<md-list-item class="md-3-line" ng-href="#/home">
+       	 			<md-list-item class="md-3-line" ng-href="#/home" ng-click="closeLeft()">
         				<span class="menu-list">Home</span>
         			</md-list-item>
-        			<md-list-item class="md-3-line" ng-href="#/projects">
+        			<md-list-item class="md-3-line" ng-href="#/projects" ng-click="closeLeft()">
         				<span class="menu-list">Project</span>
         			</md-list-item>
-        			<md-list-item class="md-3-line" ng-href="#/ngos">
+        			<md-list-item class="md-3-line" ng-href="#/ngos" ng-click="closeLeft()">
         				<span class="menu-list">Ngos</span>
         			</md-list-item>
-        			<md-list-item class="md-3-line" ng-href="#/wishlist">
+        			<md-list-item class="md-3-line" ng-href="#/wishlist" ng-click="closeLeft()">
         				<span class="menu-list">WishList</span>
         			</md-list-item>
         		</md-list>
