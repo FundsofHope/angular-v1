@@ -52,6 +52,7 @@ angular.module('indexCtrl', [])
 		            	$http.post('http://api.fundsofhope.org/user/signup/', data, config)
 		            		.success(function (data, status, headers, config) {
 		                		$scope.PostDataResponse = data;
+		                		console.log(data.user_id);
 		                		$cookieStore.put('user_id', data.user_id);
 		            		})
 		            		.error(function (data, status, header, config) {
@@ -86,7 +87,7 @@ angular.module('indexCtrl', [])
 
 		// GET COOKIE NAMED USER_ID
 		$scope.getUser = function() {
-			if($cookieStore.get('user_id') == 6){
+			if($cookieStore.get('user_id') == 2){
 				return true;
 			}else {
 				return false;
