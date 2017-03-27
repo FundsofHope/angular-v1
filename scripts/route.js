@@ -12,9 +12,12 @@ angular.module('route', [])
 			}).when('/ngos', {
 				templateUrl: 'templates/ngo.html',
 				controller: 'ngo-ctrl'
-			}).when('/wishlist', {
-				templateUrl: 'templates/wishlist.html',
-				controller: 'wishlist-ctrl'
+			}).when('/trending', {
+				templateUrl: 'templates/trending.html',
+				controller: 'trendingCtrl'
+			}).when('/custom', {
+				templateUrl: 'templates/custom.html',
+				controller: 'customCtrl'
 			}).otherwise({
 				redirectTo: '/home'
 			});
