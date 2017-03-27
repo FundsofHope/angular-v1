@@ -52,7 +52,7 @@ angular.module('indexCtrl', [])
 		            	$http.post('http://api.fundsofhope.org/user/signup/', data, config)
 		            		.success(function (data, status, headers, config) {
 		                		$scope.PostDataResponse = data;
-		                		console.log(data.user_id);
+		                		// console.log(data.user_id);
 		                		$cookieStore.put('user_id', data.user_id);
 		            		})
 		            		.error(function (data, status, header, config) {

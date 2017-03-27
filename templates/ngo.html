@@ -1,15 +1,22 @@
 <section layout="row" flex layout-wrap layout-fill>
 	<md-card class="intro_card">
-		<mad-card-title class="card_title">
+		<md-card-title class="card_title">
 			<md-card-title-text class="title_text">
 				<span class="md-headline">Card Headline</span><br>
 				<span class="md-subhead">Card Subheading</span>
 			</md-card-title-text>
-		</mad-card-title>
+		</md-card-title>
 		<md-card-content class="intro_card_content">
 			<p class="desc_card_content">
 				lorem ipsum
 			</p>
 		</md-card-content>
 	</md-card>
+	<div style="display: block; clear: both;"></div>
+	<div class="commonMaterialContainer" layout="row" layout-wrap flex="80">	
+		<md-card id="project-card" ng-repeat="items in ngoData" flex="23">
+			<img ng-src="http://api.fundsofhope.org{{items.head}}" class="projectImg" alt="Washed Out">
+			<h2 id="card-title">{{items.name}}</h2> 
+	    </md-card>
+	</div>
 </section>

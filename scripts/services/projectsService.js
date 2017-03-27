@@ -9,7 +9,7 @@ angular.module('projectsService', [])
 						'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'        	
                 	}
 				}
-				return $http.get('http://api.fundsofhope.org/project');
+				return $http.get('http://api.fundsofhope.org/project/');
 				}
 			}
 		}])
